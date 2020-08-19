@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="PlanoDeEstudos.Views.HomePage"
+             BackgroundColor="Blue">
+    <ContentPage.Content>
+        <StackLayout>
+            <!--<Grid Margin="0" Padding="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200" />
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+            Grid.Row="0"
+            Grid.Row="1"-->
+                <yummy:PancakeView BackgroundColor="#bc91d7" 
+                               CornerRadius="45,45,45,45" 
+                               IsClippedToBounds="true" 
+                               HorizontalOptions="FillAndExpand" 
+                               HeightRequest="150"
+                               
+                               Margin="10,10,10,20"
+                               Padding="20,20,20,0">
+                    <StackLayout>
+                        <Label TextColor="White" Text="Plano de Estudo" FontSize="Large" TextDecorations="Underline"/>
+                        <Label TextColor="White" Text="Meta: Improve English" FontSize="Large"/>
+                        <Label TextColor="White" Text="Prazo: 01/01/2020" FontSize="Medium" FontAttributes="Bold"/>
+                    </StackLayout>
+                </yummy:PancakeView>
+                <yummy:PancakeView BackgroundColor="#000" 
+                               CornerRadius="45,45,0,0" 
+                               IsClippedToBounds="true" 
+                               HorizontalOptions="FillAndExpand"
+                               Margin="0,0,0,20"
+                               Padding="20,20,20,0">
+                    <ScrollView>
+                        <StackLayout>
+                            <CollectionView>
+                                <CollectionView.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>This is a CollectionView!</x:String>
+                                        <x:String>Your feedback on the experience of converting a ListView to a CollectionView is incredibly appreciated.</x:String>
+                                        <x:String>Here are three general questions:</x:String>
+                                        <x:String>1. How was the experience of converting your existing ListView to a CollectionView?</x:String>
+                                        <x:String>2. How is the performance compared to the ListView?</x:String>
+                                        <x:String>3. Is there a specific piece of functionality that you'd like to see?</x:String>
+                                    </x:Array>
+                                </CollectionView.ItemsSource>
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackLayout Padding="5">
+                                            <Label TextColor="White" Text="{Binding .}" d:Text="Design Time Data" FontSize="10"/>
+                                            <Label TextColor="Yellow" Text="{Binding .}" d:Text="Design Time Data" FontSize="10"/>
+                                            <Label TextColor="LightBlue" Text="{Binding .}" d:Text="Design Time Data" FontSize="10"/>
+                                        </StackLayout>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </StackLayout>
+                    </ScrollView>
+                </yummy:PancakeView>
+            <!--</Grid>-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
